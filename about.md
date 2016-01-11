@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: 关于
 description: Find out a bit more about me. Read about who I am, what I do and what are my passions.
 permalink: /about/
 ---

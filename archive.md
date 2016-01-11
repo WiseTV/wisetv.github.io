@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Archive
+title: 文章
 description: Browse through all the articles I've written until now.
 permalink: /archive/
 ---
