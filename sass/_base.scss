@@ -1,0 +1,141 @@
+/*------------------------------------*\
+  Typography
+\*------------------------------------*/
+
+
+/**
+ * Alter the default CSS box model 
+ */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+}
+
+/**
+ * Custom content selection
+ */
+
+::-moz-selection {
+  color: #fff;
+  background-color: $color-red;
+}
+
+::selection {
+  color: #fff;
+  background-color: $color-red;
+}
+
+/**
+ * All the img's are responsive
+ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+/**
+ * Horizontal lines
+ */
+
+hr {
+  @include rem(margin, $gutter 0);
+  border: 0;
+  border-top: 1px solid $color-light;
+
+  &.bold {
+    border-top-width: 8px;
+    border-style: dashed;
+  }
+}
+
+/**
+ * Body defaults
+ */
+
+body {
+  margin: 0;  
+  color: $color-black;
+  font-size: $font-size;
+  line-height: $line-height; 
+  font-family: $rtd-font;
+  //background-image: linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px);
+  //background-size: 100% $line-height;   
+}
+
+/**
+ * The main container wrapper
+ */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @include rem(padding-left, $gutter);
+  @include rem(padding-right, $gutter);   
+}
+
+/**
+ * Links
+ */
+
+a { 
+  color: $color-red; 
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+h1 a {
+  color: $color-black;
+
+  &:hover{
+    color: $color-red;
+  }   
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a { 
+  &:hover{
+    text-decoration: none;
+  } 
+}
+
+/**
+ * Blockquote
+ */
+
+blockquote {
+  font-family: Georgia, serif;
+  font-style: italic;
+  position: relative;
+  @include rem(padding, 0 $gutter 0 $gutter-2x);
+
+  &:before {
+    color: #ddd;
+    content: "\201C";
+    font: italic 100px Tahoma,Arial;
+    @include rem(left, -$gutter);
+    @include rem(top, -$gutter);
+    position: absolute;
+    z-index: -1;
+  }   
+}
+
+/**
+ * Code blocks
+ */
+
+code {
+  background: #ddd;
+  padding: 1px 3px;
+  font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+}

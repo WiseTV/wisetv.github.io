@@ -1,0 +1,142 @@
+/*------------------------------------*\
+  Sidebar
+\*------------------------------------*/
+
+/**
+ * The abstract-shaped modules
+ */
+
+.aside-module {
+  @include rem(margin, 0 0 $gutter);
+  @include rem(padding, $gutter);
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    z-index: -1;
+    background: $color-light;
+    transform: skewx( -3deg );  
+  } 
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed rgba(0,0,0,.1);
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+/**
+ * Get updates via RSS or email
+ */
+
+.email-form { 
+  position: relative;
+}
+
+.email-form__text {
+  padding: 5px;
+  height: 40px;
+  border: 0;
+  width: 100%;
+}
+
+.email-form__text:focus + .email-form__submit,
+.email-submit:active {
+  background: #e96a19;
+}
+
+.email-form__submit {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 50px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #ddd;
+  border: 0;
+}
+
+.rss-label {
+  background: #e96a19 ;
+  display: inline-block;
+  padding: 2px 6px;  
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+/**
+ * BSA
+ */
+
+.adpacks-wrap {
+  display: block;
+  overflow: hidden;
+}
+
+.adpacks-img {
+  float: left;
+  margin-right: 10px;
+  width: 130px;
+  height: 100px;
+}
+
+.adpacks-text {
+  display: block;
+  line-height: normal;
+  color: $color-black;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.adpacks-poweredby { 
+  display: none;
+}
+
+/**
+ * Aside list
+ */
+ 
+.aside-module--list {
+  @extend %unstyled-list;
+
+  li {
+    margin: 2px 0;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 3px;
+      color: $color-black;
+      background: rgba(0, 0, 0, 0.015);
+      transition: all .1s ease-out;
+
+      &:hover {
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.05);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

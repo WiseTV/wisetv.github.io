@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  Buttons
+\*------------------------------------*/
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px 8px;
+  text-align: center;
+  color: $color-black;
+  border: 2px solid $color-red;
+  border-radius: 3px;
+  transition: .2s ease-out color, .2s ease-out background-color;
+  
+  &:hover {
+    color: #fff;
+    background-color: $color-red;
+    text-decoration: none;
+  }
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn--large {
+  padding: 10px 20px;
+}
+
+.btn--secondary {
+  border-color: $color-navy;
+  &:hover {  
+    background: $color-navy;
+  }
+}
+
+.btn--disabled {
+  pointer-events: none;
+  border-color: $color-light;
+  color: darken($color-light, 25%);  
+  &:hover {
+    color: darken($color-light, 25%);   
+    background: none;
+  }
+}
