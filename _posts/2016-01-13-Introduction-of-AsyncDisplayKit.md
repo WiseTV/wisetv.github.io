@@ -1,15 +1,12 @@
 ---
-author: Red
+author: 李岩
 comments: true
 date: 2016-01-13 16:15:10+00:00
 layout: post
-slug: css-tips-and-tricks
 title: Introduction of AsyncDisplayKit
 description: instroduce Facebook's AsyncDisplayKit
-development blog, targeted towards web designers and developers.
-wordpress_id: 3
 categories:
-- Miscellaneous
+- iOS
 ---
 
 #AsyncDisplayKit原理简介
