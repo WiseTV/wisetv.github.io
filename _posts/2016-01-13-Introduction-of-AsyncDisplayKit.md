@@ -3,13 +3,11 @@ author: 李岩
 comments: true
 date: 2016-01-13 16:15:10+00:00
 layout: post
-title: Introduction of AsyncDisplayKit
+title: AsyncDisplayKit原理简介
 description: instroduce Facebook's AsyncDisplayKit
 categories:
 - iOS
 ---
-
-#AsyncDisplayKit原理简介
 
 Facebook发布了iOS UI框架AsyncDisplayKit（ASDK），这个框架被用于Facebook自家的应用Paper中，能够提高UI的流畅性并缩短响应时间。由于现在网上有关ASDK的资料不是太多，所以我们团队根据网上现有的资料整理了相关内容，给大家介绍一下AsyncDisplayKit的原理。
 <!-- more -->
