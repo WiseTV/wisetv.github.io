@@ -77,7 +77,7 @@ UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSubl
 
 在控制View的frame的时候，ASDisplayNode采用了另外一套形式，分别在以下两个方法中。
 
-```objc
+{% highlight objective_c %}
 // perform expensive sizing operations on a background thread
 - (CGSize)calculateSizeThatFits:(CGSize)constrainedSize
 {
@@ -106,7 +106,8 @@ UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSubl
   CGSize textSize = _textNode.calculatedSize;
   _textNode.frame = (CGRect){ CGPointZero, textSize };
 }
-```
+{% endhighlight %}
+
 需要注意以下几点：</br>
 1. Nodes在-calculateSizeThatFits:的实现方法中递归地计算他们的子节点。</br>
 2、Nodes会执行其他的费时的预布局计算在-calculateSizeThatFits:，会适当地缓存中间的结果。</br>
