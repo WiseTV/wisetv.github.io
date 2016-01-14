@@ -43,7 +43,7 @@ AsyncDisplayKit是在UI展现过程中将几个重要阶段剥离主线程从而
 UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSublayers等函数，并且一旦修改了frame等属性必然会触发这类layout函数。而这些函数的实现往往自上而下，要根据container来measure子view的大小并且层层递归计算下去。一旦layoutSubview的计算成本过大，必然会导致UI的响应缓慢或者刷新有delay。
 在计算和布局自定义视图时在主线程一次做完所有的。例如在最小范围内些一个textView和imageView会是这样：
 
-```objc
+{% highlight objective-c %}
 - (CGSize)sizeThatFits:(CGSize)size
 {
   // size the image
@@ -72,7 +72,7 @@ UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSubl
   CGSize textSize = [_textView sizeThatFits:maxTextSize];
   _textView.frame = (CGRect){ CGPointZero, textSize };
 }
-```
+{% endhighlight %}
 我们对子视图做了两次计算，第一次算出了视图需要多大，第二次计算是布局时，然而当我们的布局算法很简单时，我们也在计算文本时阻塞了主线程。
 
 在控制View的frame的时候，ASDisplayNode采用了另外一套形式，分别在以下两个方法中。
