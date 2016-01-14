@@ -77,7 +77,7 @@ UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSubl
 
 在控制View的frame的时候，ASDisplayNode采用了另外一套形式，分别在以下两个方法中。
 
-{% highlight objective_c %}
+{% highlight objective-c %}
 // perform expensive sizing operations on a background thread
 - (CGSize)calculateSizeThatFits:(CGSize)constrainedSize
 {
