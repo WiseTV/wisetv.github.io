@@ -12,7 +12,7 @@ categories:
 #AsyncDisplayKit原理简介
 
 Facebook发布了iOS UI框架AsyncDisplayKit（ASDK），这个框架被用于Facebook自家的应用Paper中，能够提高UI的流畅性并缩短响应时间。由于现在网上有关ASDK的资料不是太多，所以我们团队根据网上现有的资料整理了相关内容，给大家介绍一下AsyncDisplayKit的原理。
-
+<!-- more -->
 ##AsyncDisplayKit
 在我们开发APP时，为了保证它的用户界面的流畅和响应，APP渲染帧率应该和iOS基准保持同步，即60帧每秒。这意味着主线程对每一帧有60分之一的时间来推送，这大约是16毫秒，需要在如此短时间内来执行所有的布局和绘制的代码。而由于系统的性能开销，在导致丢帧之前，你的代码通常只有不到10毫秒的时间来执行。但苹果的标准技术运行在应用的主线程中，用户输入需要等到主线程执行完毕才能进行。所以在复杂的UI界面上其流畅性难以得到保证。
 
@@ -45,7 +45,7 @@ AsyncDisplayKit是在UI展现过程中将几个重要阶段剥离主线程从而
 UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSublayers等函数，并且一旦修改了frame等属性必然会触发这类layout函数。而这些函数的实现往往自上而下，要根据container来measure子view的大小并且层层递归计算下去。一旦layoutSubview的计算成本过大，必然会导致UI的响应缓慢或者刷新有delay。
 在计算和布局自定义视图时在主线程一次做完所有的。例如在最小范围内些一个textView和imageView会是这样：
 
-```objective-c
+```objc
 - (CGSize)sizeThatFits:(CGSize)size
 {
   // size the image
@@ -79,7 +79,7 @@ UI框架中要布局一个UIView一般需要改写layoutSubviews或者layoutSubl
 
 在控制View的frame的时候，ASDisplayNode采用了另外一套形式，分别在以下两个方法中。
 
-```objective-c
+```objc
 // perform expensive sizing operations on a background thread
 - (CGSize)calculateSizeThatFits:(CGSize)constrainedSize
 {
