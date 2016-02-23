@@ -6,7 +6,7 @@ layout: post
 title: IPTV团队博客写作指南
 description: IPTV Pages
 categories:
-- guide
+- iOS
 ---
 
 Facebook发布了iOS UI框架AsyncDisplayKit（ASDK），这个框架被用于Facebook自家的应用Paper中，能够提高UI的流畅性并缩短响应时间。由于现在网上有关ASDK的资料不是太多，所以我们团队根据网上现有的资料整理了相关内容，给大家介绍一下AsyncDisplayKit的原理。
