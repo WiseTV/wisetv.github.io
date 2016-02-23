@@ -9,6 +9,9 @@ categories:
 - guide
 ---
 
+本文旨在介绍使用github pages写作的基本流程，大家可以参考一下。
+
+<!-- more -->  
 #介绍github pages
 请参考[官网](https://pages.github.com/)，先了解下大体信息。
 #IPTV团队博客地址
@@ -19,7 +22,6 @@ categories:
 * 熟练使用mark down语法，详见[Markdown 语法说明 (简体中文版)](http://www.appinn.com/markdown/)
 * 了解Github相关的知识，参见[官网帮助文档](https://help.github.com/)  
 
-<!-- more -->  
 #IPTV团队博客写作流程
 1. 加入IPTV Github团队（注册一个github账号，然后联系李喆）
 2. Fork[IPTV团队博客代码库](https://github.com/WiseTV/wisetv.github.io)到自己的Repositories中
