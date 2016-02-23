@@ -6,7 +6,7 @@ layout: post
 title: IPTV团队博客写作指南
 description: 介绍IPTV团队博客的基本写作方式
 categories:
-- 指南
+- guide
 ---
 #介绍github pages
 请参考[官网](https://pages.github.com/)，先了解下大体信息。
@@ -18,3 +18,14 @@ categories:
 * 熟练使用mark down语法，详见[Markdown 语法说明 (简体中文版)](http://www.appinn.com/markdown/)
 * 了解Github相关的知识，参见[官网帮助文档](https://help.github.com/)  
 
+<!-- more -->  
+#IPTV团队博客写作流程
+1. 加入IPTV Github团队（注册一个github账号，然后联系李喆）
+2. Fork[IPTV团队博客代码库](https://github.com/WiseTV/wisetv.github.io)到自己的Repositories中
+3. 向图中的文件夹下的添加文章（具体格式参考已有文章）![](http://7xkda0.com1.z0.glb.clouddn.com/16-2-23/15604278.jpg)  
+4. 提一个pull request到官方代码库
+5. 搞定！
+
+#后记
+建议提交之前先在本地测试，需要搭建jekyll服务器，请自行查找相关资源学习。
+有任何问题请联系我[email](mailto:lizhe1@wisetv.com.cn)
