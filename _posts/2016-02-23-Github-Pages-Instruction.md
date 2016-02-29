@@ -9,7 +9,7 @@ categories:
 - guide
 ---
 
-本文旨在介绍使用github pages写作的基本流程，大家可以参考一下。
+本文旨在介绍使用github pages写作的基本流程，大家可以参考一下。![](http://7xkda0.com1.z0.glb.clouddn.com/16-2-29/71838049.jpg)
 
 <!-- more -->  
 #介绍github pages
