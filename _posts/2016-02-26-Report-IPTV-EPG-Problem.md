@@ -8,8 +8,6 @@ description: Report IPTV EPG Problem
 categories:
 - CMS
 ---
-##2016年2月13日：数据库负载压力问题说明##
-
 2016年2月13日至2月14日期间，IPTV EPG平台在晚间高锋出现页面无响应故障。以下是本次故障的详细报告
 <!-- more -->
 ###事件描述###
